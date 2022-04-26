@@ -9,6 +9,9 @@ This repository contains the code used to identify and analyise overlapping ORFs
 ## Acknowledgements
 
 Alexandre D'Halluin, whose project this work contributes to,
+
 Terry Kipkorir for his great insights,
+
 Kristine Arnvig for her supervision and guiding hand,
+
 The BBSRC and the LIDo programme for providing me funding for my PhD, and giving me the opportunity to learn so so so much!
