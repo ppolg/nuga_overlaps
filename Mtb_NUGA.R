@@ -14,7 +14,7 @@
 # Libs #
 ########
 
-packages <- c("hash","here","tidyverse","ape","data.table","ggthemes","ggplot2","Biostrings")
+packages <- c("hash","here","tidyverse","ape","data.table","ggthemes","ggplot2","Biostrings","forcats")
 invisible(lapply(packages, require, character.only = TRUE))
 
 ########
@@ -142,7 +142,7 @@ gff_plus <- gff_plus %>%
 # Get overlap
 
 plus_overlaps <- gff_plus %>%
-  dplyr::filter(overlap_next == TRUE | overlap_prev == TRUE ) %>%
+    dplyr::filter(overlap_next == TRUE | overlap_prev == TRUE ) %>%
   dplyr::mutate(
     n_overlap_prev = ifelse(overlap_prev == TRUE,prev_end - start +1,NA),
     n_overlap_next = ifelse(overlap_next == TRUE,end - next_start +1,NA),
@@ -317,9 +317,10 @@ ggplot(overlaps_all,aes(n_overlap_next)) +
   geom_histogram(binwidth = 1, color="black", size=1, fill="grey80") +
   theme_alex() +
   xlab("Overlap length (nt)") +
-  ylab("Count (log10)") +
+  ylab("Count") +
   scale_linetype_manual(values = c(4,1)) +
-  scale_y_log10(expand = c(0,0), breaks = c(1,10,100,1000), limits=c(1,1e3)) +
+#  scale_y_log10(expand = c(0,0), breaks = c(1,10,100,1000), limits=c(1,1e3)) +
+  scale_y_continuous(expand=c(0,0), limits=c(0,600)) +
   scale_x_continuous(limits = c(0,25), expand = c(0,0), breaks = c(1,4,7,10,13,16,19,22,25))
 
 # Function categories distribution
