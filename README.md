@@ -1,6 +1,6 @@
 # Identification of overlapping ORFs in Mtb
 
-D'Halluin *et al.*, 2022 (Manuscript in writing)
+D'Halluin *et al.*, 2022 (on BioRxiv: https://www.biorxiv.org/content/10.1101/2022.06.01.494293v2)
 
 ## Repository information
 
